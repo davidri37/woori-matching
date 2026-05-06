@@ -60,7 +60,7 @@ export default function RegisterPage() {
     setSubmitting(false)
 
     if (error) {
-      setErrors({ submit: "저장 중 오류가 발생했습니다. 다시 시도해 주세요." })
+      setErrors({ submit: `[${error.code ?? "?"}] ${error.message}` })
       return
     }
 
